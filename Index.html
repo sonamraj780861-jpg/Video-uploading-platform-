@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoShare - Like YouTube</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VideoShare</h1>
+        <nav>
+            <input type="text" id="search-bar" placeholder="Search videos...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="music">Music</option>
+                <option value="gaming">Gaming</option>
+                <option value="education">Education</option>
+            </select>
+            <button id="upload-btn">Upload Video</button>
+            <button id="profile-btn">My Profile</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="video-list">
+            <!-- Videos will be dynamically added here -->
+        </section>
+
+        <section id="video-player" style="display: none;">
+            <h2 id="video-title"></h2>
+            <video id="player" controls>
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="share-btn">Share</button>
+            <div id="comments">
+                <h3>Comments</h3>
+                <ul id="comment-list"></ul>
+                <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+                <button id="add-comment-btn">Post Comment</button>
+            </div>
+        </section>
+
+        <section id="user-profile" style="display: none;">
+            <h2>User Profile</h2>
+            <p>Name: John Doe</p>
+            <p>Uploaded Videos:</p>
+            <ul id="user-videos"></ul>
+        </section>
+
+        <div id="upload-modal" style="display: none;">
+            <h3>Upload Video</h3>
+            <input type="text" id="video-title-input" placeholder="Video Title">
+            <select id="video-category-input">
+                <option value="music">Music</option>
+                <option value="gaming">Gaming</option>
+                <option value="education">Education</option>
+            </select>
+            <input type="file" id="video-file-input" accept="video/*">
+            <button id="submit-upload">Upload</button>
+            <button id="close-upload">Cancel</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
